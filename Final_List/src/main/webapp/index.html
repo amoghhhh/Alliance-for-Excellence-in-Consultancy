@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List Employee</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding-top: 20px; /* Space above the cards */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+         .navbar {
+			text-decoration: none;
+            background-color: #fff; /* Navbar background color */
+            width: 100%;
+            position: fixed;
+            top: 0; /* Fixed at the top */
+            z-index: 1000; /* Higher than other elements */
+        }
+        
+        .navbar-brand {
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-nav {
+			text-decoration: none;
+            margin-left: 20px; /* Add space between brand and menu items */
+        }
+
+        .list-emp-box {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px; /* Adjusted width */
+            margin: auto; /* Center horizontally */
+            background: linear-gradient(45deg, #64B5F6, #81D4FA); /* List of Emps box gradient color */
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="submit"] {
+            width: calc(100% - 18px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        a {
+            text-decoration: none;
+            color: #3366cc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="http://172.16.12.76:8080/front.html">
+                <img src="logo.png" alt="Load" width="60" height="80">
+            </a>
+            <h2 style="color: black;">Alliance for Excellence in Consultancy</h2>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"> <!-- Moved menu items to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="http://172.16.12.76:8080/front.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://172.16.12.76:8080/about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true" href="http://172.16.12.76:8080/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container"> <!-- Removed inline style for padding-top -->
+        <div class="list-emp-box">
+            <h2>Get List of Employees</h2>
+            <a href="/list">Get the list of Employees</a><br>
+        </div>
+    </div>
+</body>
+</html>

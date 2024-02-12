@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+	  <div class="container">
+	     <a class="navbar-brand" href="front.html">
+	       <img src="logo.png" alt="Load" width="60" height="80">
+		   <h1 style="color: black;">Alliance for Excellence in Consultancy</h1>
+	     </a>
+	   </div>
+      <div class="content">
+        <div class="left-side">
+          <div class="address details">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="topic">Address</div>
+            <div class="text-one">ABES Engineering, College</div>
+            <div class="text-two">Nh-24</div>
+          </div>
+          <div class="phone details">
+            <i class="fas fa-phone-alt"></i>
+            <div class="topic">Phone</div>
+            <div class="text-one">+91 9125653211</div>
+            <div class="text-two">+91 9128927688</div>
+          </div>
+          <div class="email details">
+            <i class="fas fa-envelope"></i>
+            <div class="topic">Email</div>
+            <div class="text-one">amoghgupta@gmail.com</div>
+            <div class="text-two">amg@gmail.com</div>
+          </div>
+        </div>
+        <div class="right-side">
+          <h3>Let's talk about your project</h3>
+          <p>Drop us a line through the form below and we'll get back to you</p>
+          <form action="/message" method="post">
+			  <div class="input-box">
+			    <label for="name"></label>
+			    <input type="text" id="name" name="name" placeholder="Enter your name" required />
+			  </div>
+			  <div class="input-box">
+			    <label for="email"></label>
+			    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+			  </div>
+			  <div class="input-box message-box">
+			    <label for="details"></label>
+			    <textarea id="details" name="details" placeholder="Please tell us a bit more about yourself, projects, and interesting areas" required></textarea>
+			  </div>
+			  <br>
+			  <div class="button">
+			    <input type="submit" value="Send Now" class="green-button" style="border-radius: 50px; padding: 15px 30px; font-size: 16px; background-color:#38761d; color:white; border: 2px solid white;" />
+			  </div>
+			</form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+

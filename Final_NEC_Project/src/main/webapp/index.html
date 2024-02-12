@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding-top: 20px; /* Space above the cards */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .navbar {
+			text-decoration: none;
+            background-color: #fff; /* Navbar background color */
+            width: 100%;
+            position: fixed;
+            top: 0; /* Fixed at the top */
+            z-index: 1000; /* Higher than other elements */
+        }
+        
+        .navbar-brand {
+            text-decoration: none; /* Remove underline */
+        }
+
+        .navbar-nav {
+			text-decoration: none;
+            margin-left: 20px; /* Add space between brand and menu items */
+        }
+        
+        .form-box {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33.33% - 20px); /* Adjusting the width */
+            margin-right: 20px;
+            background: linear-gradient(45deg, #FF6BBA, #63FFD5); /* Box gradient color */
+        }
+
+        .form-box:nth-child(2) {
+            background: linear-gradient(45deg, #A770EF, #CF8BF3); /* Second box gradient color */
+        }
+
+        .form-box:nth-child(3) {
+            background: linear-gradient(45deg, #F09433, #D62A98); /* Third box gradient color */
+        }
+
+        .list-emp-box {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-top: 20px;
+            background: linear-gradient(45deg, #64B5F6, #81D4FA); /* List of Emps box gradient color */
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="submit"] {
+            width: calc(100% - 18px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: #3366cc;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <a class="navbar-brand" href="front.html">
+                <img src="logo.png" alt="Load" width="60" height="80">
+            </a>
+            <h2 style="color: black;">Alliance for Excellence in Consultancy</h2>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto"> <!-- Moved menu items to the right -->
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="front.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container" style="padding-top: 120px;"> <!-- Added padding-top to create space between the navbar and cards -->
+        <div class="d-flex">
+            <div class="form-box">
+                <h2>Add Employee</h2>
+                <form action="/add" method="get">
+                    Enter ID: <input type="number" name="id"><br>
+                    Enter Name: <input type="text" name="username"><br>
+                    Enter Age: <input type="number" name="age"><br>
+                    Enter Salary: <input type="number" name="sal"><br>
+                    Enter Password: <input type="password" name="password"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+
+            <div class="form-box">
+                <h2>Update Employee</h2>
+                <form action="/update" method="get">
+                    Enter ID: <input type="number" name="id"><br>
+                    Enter Name: <input type="text" name="username"><br>
+                    Enter Age: <input type="number" name="age"><br>
+                    Enter Salary: <input type="number" name="sal"><br>
+                    Enter Password: <input type="password" name="password"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            
+            <div class="form-box">
+                <h2>Delete Employee</h2>
+                <br><br><br><br><br>
+                <form action="/delete" method="get">
+                    Enter id: <input type="number" name="id"><br>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        
+        <div class="list-emp-box">
+            <h2>Get List of Employees</h2>
+            <a href="/list">Get the list of Employees</a><br>
+        </div>
+    </div>
+</body>
+</html>
